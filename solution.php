@@ -38,8 +38,8 @@ function iranServerRoundTable(int $n, int $m, array $connections): string
     }
 
     // Balancing table sizes
-    $previousTable2 = [];
-    while (sizeof($table1) - sizeof($table2) > 1 && $previousTable2 != $table2) {
+    $previousTable2 = null;
+    while (sizeof($table1) - sizeof($table2) > 1 && $previousTable2 !== $table2) {
         $lastItemOfTable1 = $table1[sizeof($table1) - 1];
         $previousTable2 = $table2;
 
